@@ -8,9 +8,9 @@
 ### to-do
 1. ~~Convert to bootstrap 4~~
 2. set up firebase
-3. meal plan module
+3. ~~meal plan module~~
 4. change architecture to phase 1
-5. mobile view / menu
+5. ~~mobile view / menu~~
 6. design home screen
 7. put error messages on route guards
   -- first live deploy (docker?)
