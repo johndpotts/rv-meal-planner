@@ -6,7 +6,7 @@
 2. run npm-install for dependencies
 
 ### to-do
-1. Convert to bootstrap 4
+1. ~~Convert to bootstrap 4~~
 2. set up firebase
 3. meal plan module
 4. change architecture to phase 1

@@ -14,6 +14,7 @@ import * as RecipeActions from '../../recipes/store/recipe.actions';
 })
 export class HeaderComponent implements OnInit {
   authState: Observable<fromAuth.State>;
+  toggleMenu = false;
 
   constructor(private store: Store<fromApp.AppState>) {
   }
@@ -32,5 +33,9 @@ export class HeaderComponent implements OnInit {
 
   onLogout() {
     this.store.dispatch(new AuthActions.Logout());
+  }
+
+  onToggleMenu() {
+    this.toggleMenu = !this.toggleMenu;
   }
 }
