@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../auth/auth-guard.service';
-import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
-import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
-import { RecipeStartComponent } from './recipe-start/recipe-start.component';
-import { RecipesComponent } from './recipes.component';
+import { MealPlanViewerComponent } from './meal-plan-viewer/meal-plan-viewer.component';
+import { MealPlanTripComponent } from './meal-plan-trip/meal-plan-trip.component';
+import { MealPlanEditComponent } from './meal-plan-edit/meal-plan-edit.component';
+
 
 const mealPlansRoutes: Routes = [
-  { path: '', component: MealPlansComponent, children: [
-    { path: '', component: RecipeStartComponent },
-    { path: 'new', component: RecipeEditComponent, canActivate: [AuthGuard] },
-    { path: ':id', component: RecipeDetailComponent },
-    { path: ':id/edit', component: RecipeEditComponent, canActivate: [AuthGuard] },
+  { path: '', component: MealPlanViewerComponent, children: [
+    { path: 'trip', component: MealPlanTripComponent },
+    { path: 'new', component: MealPlanEditComponent, canActivate: [AuthGuard] },
+    { path: ':id', component: MealPlanTripComponent  },
+    { path: ':id/edit', component: MealPlanEditComponent, canActivate: [AuthGuard] },
   ] },
 ];
 
